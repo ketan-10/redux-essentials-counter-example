@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { store } from './app/store';
-import { Provider } from 'react-redux';
+import  Provider  from './react-redux/src/components/Provider';
 import * as serviceWorker from './serviceWorker';
+import {MyProvider} from './features/my-counter/helper/MyProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
+    <MyProvider store={store}>
       <App />
-    </Provider>
+    </MyProvider>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
